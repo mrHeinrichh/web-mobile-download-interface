@@ -57,9 +57,9 @@
                         <a href="#home" class="nav-item nav-link active">Home</a>
                         <a href="#about" class="nav-item nav-link">About</a>
                         <a href="#feature" class="nav-item nav-link">Feature</a>
-                        <a href="#pricing" class="nav-item nav-link">Pricing</a>
-                        <a href="#review" class="nav-item nav-link">Review</a>
                         <a href="#contact" class="nav-item nav-link">Contact</a>
+                        <a href="javascript:void(0);" onclick="scrollToSection('downloadSection')" class="nav-item nav-link">Download our App</a>
+
                     </div>
           
                 </div>
@@ -71,8 +71,8 @@
                         <div class="col-lg-8 text-center text-lg-start">
                             <h1 class="text-white mb-4 animated slideInDown">Bringing Warmth To Your Kitchen</h1>
                             <p class="text-white pb-3 animated slideInDown">Our store is your one-stop destination for all your LPG needs, providing a seamless and reliable experience for both residential and commercial customers</p>
-                            <a href="" class="btn btn-primary-gradient py-sm-3 px-4 px-sm-5 rounded-pill me-3 animated slideInLeft">Retailer App</a>
-                            <a href="" class="btn btn-secondary-gradient py-sm-3 px-4 px-sm-5 rounded-pill animated slideInRight">Customer App</a>
+                            <a href="javascript:void(0);" onclick="scrollToSection('downloadSection')" class="btn btn-primary-gradient py-sm-3 px-4 px-sm-5 rounded-pill me-3 animated slideInLeft">Customer App</a>
+                            <a href="javascript:void(0);" onclick="scrollToSection('downloadSection')" class="btn btn-primary-gradient py-sm-3 px-4 px-sm-5 rounded-pill me-3 animated slideInLeft">Retailer App</a>
                         </div>
                         <div class="col-lg-4 d-flex justify-content-center justify-content-lg-end wow fadeInUp" data-wow-delay="0.3s">
                             <div class="owl-carousel screenshot-carousel">
@@ -285,7 +285,8 @@
 
 
         <!-- Download Start -->
-        <div class="container-xxl py-5">
+        
+        <div id="downloadSection" class="container-xxl py-5">
             <div class="container py-5 px-lg-5">
                 <div class="row g-5 align-items-center">
                     <div class="col-lg-6">
@@ -302,17 +303,17 @@
                                 
                                 <a href="https://github.com/mrHeinrichh/lpg-app-versions/raw/main/customer_app.apk" class="d-flex bg-secondary-gradient rounded py-3 px-4">
                                     <i class="fab fa-android fa-3x text-white flex-shrink-0"></i>
-                                    <div class="ms-3">
-                                        <p class="text-white mb-0">Retailer Apk</p>
+                                    <div class="ms-1">
+                                        <p class="text-white mb-0">Customer Apk</p>
                                         <h5 class="text-white mb-0">Download here!</h5>
                                     </div>
                                 </a>
                             </div>
                             <div class="col-sm-6 wow fadeIn" data-wow-delay="0.7s">
-                                <a href="https://github.com/mrHeinrichh/lpg-app-versions/raw/main/customer_app.apk" class="d-flex bg-secondary-gradient rounded py-3 px-4">
+                                <a href="https://github.com/mrHeinrichh/lpg-app-versions/raw/main/retailer_app.apk" class="d-flex bg-secondary-gradient rounded py-3 px-4">
                                     <i class="fab fa-android fa-3x text-white flex-shrink-0"></i>
-                                    <div class="ms-3">
-                                        <p class="text-white mb-0">Customer Apk</p>
+                                    <div class="ms-1">
+                                        <p class="text-white mb-0">Retailer Apk</p>
                                         <h5 class="text-white mb-0">Download here!</h5>
                                     </div>
                                 </a>
@@ -332,7 +333,7 @@
                 <div class="row justify-content-center">
                     <div class="col-lg-9">
                         <div class="wow fadeInUp" data-wow-delay="0.3s">
-                            <p class="text-center mb-4">The contact form is currently inactive. Get a functional and working contact form with Ajax & PHP in a few minutes. Just copy and paste the files, add a little code and you're done. <a href="https://htmlcodex.com/contact-form">Download Now</a>.</p>
+                            <p class="text-center mb-4">Explore real-time data on tank availability and enjoy the convenience of easy ordering through our user-friendly website. Experience swift deliveries and make your LPG shopping a breeze. Click <a href="https://lpg-web-customer.vercel.app/">LPG Online Store</a> to shop now and redefine the way you order LPG tanks!</p>
                             <form>
                                 <div class="row g-3">
                                     <div class="col-md-6">
@@ -436,7 +437,16 @@
     <script src="lib/waypoints/waypoints.min.js"></script>
     <script src="lib/counterup/counterup.min.js"></script>
     <script src="lib/owlcarousel/owl.carousel.min.js"></script>
-
+    <script>
+        function scrollToSection(sectionId) {
+            var section = document.getElementById(sectionId);
+            if (section) {
+                // You can adjust the smoothness and duration of the scroll by modifying the behavior and duration parameters
+                section.scrollIntoView({ behavior: 'smooth', block: 'start' });
+            }
+        }
+    </script>
+    
     <!-- Template Javascript -->
     <script src="js/main.js"></script>
 </body>
